@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/junit5/pom.xml" />
+        <option value="$PROJECT_DIR$/durgesh1_Jpa/durgesh1_Jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/durgesh13_jwt/pom.xml" />
+        <option value="$PROJECT_DIR$/durgesh9_Email/pom.xml" />
+        <option value="$PROJECT_DIR$/durgesh2_devTool/pom.xml" />
+        <option value="$PROJECT_DIR$/api_documentation/pom.xml" />
+        <option value="$PROJECT_DIR$/durgesh12_Mapping/pom.xml" />
+        <option value="$PROJECT_DIR$/durgesh4_thymleaf/pom.xml" />
+        <option value="$PROJECT_DIR$/durgesh11_annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/durgesh3_BookRestAPI/pom.xml" />
+        <option value="$PROJECT_DIR$/durgesh14_transactional/custom/pom.xml" />
+        <option value="$PROJECT_DIR$/durgesh23_aopApplication/pom.xml" />
+        <option value="$PROJECT_DIR$/springsecurityapplication/security11_jwt/pom.xml" />
+        <option value="$PROJECT_DIR$/springsecurityapplication/Security9_Signupform/pom.xml" />
+        <option value="$PROJECT_DIR$/springsecurityapplication/security4_EnablingH2Database/pom.xml" />
+        <option value="$PROJECT_DIR$/springsecurityapplication/Security7_customLoginLogoutPage/pom.xml" />
+        <option value="$PROJECT_DIR$/springsecurityapplication/Security2_InMemoryAuthentication/pom.xml" />
+        <option value="$PROJECT_DIR$/springsecurityapplication/Security3_RoleBasedAuthentication/pom.xml" />
+        <option value="$PROJECT_DIR$/springsecurityapplication/Security8_RoleBasedAuthentication/pom.xml" />
+        <option value="$PROJECT_DIR$/springsecurityapplication/Security6_custom_Security_Application/pom.xml" />
+        <option value="$PROJECT_DIR$/springsecurityapplication/Security10_part1_LimitLoginAttemptAccountlock/pom.xml" />
+        <option value="$PROJECT_DIR$/springsecurityapplication/Security10_part2_LimitLoginAttemptAccountlock/pom.xml" />
+        <option value="$PROJECT_DIR$/springsecurityapplication/Security1_FormBasedAuth_And_BasicAuthentication/pom.xml" />
+        <option value="$PROJECT_DIR$/springsecurityapplication/Security5_BasicAuthenticationAndWrittingYourOwnSecurityFilter/pom.xml" />
+        <option value="$PROJECT_DIR$/durgesh17_dataFromExceltoDb/pom.xml" />
+        <option value="$PROJECT_DIR$/durgesh18_dataFromDbToExcel/pom.xml" />
+        <option value="$PROJECT_DIR$/durgesh6_CssJsImageThymLeaf/pom.xml" />
+        <option value="$PROJECT_DIR$/durgesh7_SmartContactManager/pom.xml" />
+        <option value="$PROJECT_DIR$/durgesh20_SchedulerApplication/pom.xml" />
+        <option value="$PROJECT_DIR$/durgesh15_ActuatorApllicationEx/ActuatorApllicationEx/pom.xml" />
+        <option value="$PROJECT_DIR$/durgesh21_dbtoExcelDropDownMenu/pom.xml" />
+        <option value="$PROJECT_DIR$/durgesh22_InterceptorApplication/pom.xml" />
+        <option value="$PROJECT_DIR$/durgesh5_ServerSideFormValidation/pom.xml" />
+        <option value="$PROJECT_DIR$/durgesh8_SessionProblemThumLeaf3.1/pom.xml" />
+        <option value="$PROJECT_DIR$/durgesh19_batch_application_dbtoCSV/pom.xml" />
+        <option value="$PROJECT_DIR$/durgesh16_batch_application_readCsvFileandWriteIntoDatabase/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Services page</title>
+</head>
+<body>
+    <h1>These are the fragnment service page</h1>
+
+    <!--Going to bring footer here-->
+    <!-- 1st way  -->
+    <footer id="hostTag1" th:replace="footer::footer1">
+
+    </footer>
+
+    <!-- 2nd way  -->
+    <footer id="hostTag2" th:insert="footer::footer1">
+
+    </footer>
+
+    <!-- 3nd way  -->
+    <footer id="hostTag3" th:include="footer::footer1">
+
+    </footer>
+
+    <!--passing dynamic data to fragnment -->
+    <!--filename::fragnmentname-->
+    <footer id="hostTag4" th:replace="footer2::footer2(${title},${subtitle})">
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="normal/base::layout(~{::section})"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>This is User DashBoard page</title>
+</head>
+<body>
+    <section>
+
+        <div class="card mr-3 ml-3 ">
+
+            <div class="card-body">
+
+                <h1 class="text-center">Add Contact</h1>
+
+                <div class="container-fluid mt-1">
+
+                    <div class="row">
+
+                        <div class="col-md-8 offset-md-2">
+
+                            <form th:object="${contact}"
+                                  enctype="multipart/form-data"
+                                  method="POST"
+                                  th:action="@{/user/process-contact}"
+                                  class="mt-2"
+                            >
+
+                                <!-- First Name -->
+                                <div class="input-group">
+
+                                    <div class="input-group-text mr-3">
+                                        <div class="input-group-text ">
+                                            <i class="fa fa-plus"></i>
+                                        </div>
+                                    </div>
+
+                                    <input type="text"
+                                           id="firstName"
+                                           name="name"
+                                           placeholder="Enter name here"
+                                           class="form-control"
+                                           required
+                                    >
+
+                                </div>
+
+                                <!-- Second Name -->
+                                <div class="input-group mt-3">
+
+                                    <div class="input-group-text mr-3">
+                                        <div class="input-group-text ">
+                                            <i class="fa fa-user-alt"></i>
+                                        </div>
+                                    </div>
+
+                                    <input type="text"
+                                           id="secondName"
+                                           name="secondName"
+                                           placeholder="Enter nick name here"
+                                           class="form-control"
+                                           required
+                                    >
+
+                                </div>
+
+                                <!-- Phone field -->
+                                <div class="input-group mt-3">
+
+                                    <div class="input-group-text mr-3">
+                                        <div class="input-group-text ">
+                                            <i class="fa fa-phone"></i>
+                                        </div>
+                                    </div>
+
+                                    <input type="number"
+                                           id="phoneNumber"
+                                           name="phone"
+                                           placeholder="Enter phone number here"
+                                           class="form-control"
+                                           required
+                                    >
+
+                                </div>
+
+                                <!-- Email field -->
+                                <div class="input-group mt-3">
+
+                                    <div class="input-group-text mr-3">
+                                        <div class="input-group-text ">
+                                            @
+                                        </div>
+                                    </div>
+
+                                    <input type="text"
+                                           id="email"
+                                           name="email"
+                                           placeholder="Enter email here"
+                                           class="form-control"
+                                           required
+                                    >
+
+                                </div>
+
+                                <!-- Work field -->
+                                <div class="input-group mt-3">
+
+                                    <div class="input-group-text mr-3">
+                                        <div class="input-group-text ">
+                                            <i class="fa fa-briefcase"></i>
+                                        </div>
+                                    </div>
+
+                                    <input type="text"
+                                           id="work"
+                                           name="work"
+                                           placeholder="Enter work here"
+                                           class="form-control"
+                                           required
+                                    >
+
+                                </div>
+
+                                <!-- Contact Description -->
+                                <div class="form-group mt-3">
+
+                                    <textarea
+                                            name="description"
+                                            placeholder="Enter contact description "
+                                            rows="10"
+                                            class="form-control"
+                                            id="mytextarea"
+                                    >
+
+                                    </textarea>
+
+                                </div>
+
+                                <!--  Contact Image -->
+                                <div class="custom-file">
+
+                                    <input type="file" name="profileImage">
+
+                                </div>
+
+                                <div class="container text-center">
+
+                                    <button class="btn btn-outline-primary">  Save Contact</button>
+
+                                </div>
+
+                            </form>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <!-- Place the first <script> tag in your HTML's <head> -->
+        <script src="https://cdn.tiny.cloud/1/xoh6p1ll1me06xgnuyvflyur70zv6btrtmll4tvu6vprofrk/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
+        <!-- Place the following <script> and <textarea> tags your HTML's <body> -->
+        <script>
+            tinymce.init({
+              selector: '#mytextarea',
+              plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss markdown',
+              toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+              tinycomments_mode: 'embedded',
+              tinycomments_author: 'Author name',
+              mergetags_list: [
+                { value: 'First.Name', title: 'First Name' },
+                { value: 'Email', title: 'Email' },
+              ],
+              ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
+            });
+        </script>
+
+        <script>
+
+            $(document).ready(() => {
+                 $(".item").removeClass("active");
+                 $('#add-link').addClass('active');
+             })
+
+        </script>
+
+    </section>
+</body>
+</html>

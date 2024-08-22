@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/api_documentation/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/durgesh11_annotation/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/durgesh12_Mapping/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/durgesh13_jwt/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/durgesh14_transactional/custom/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/durgesh15_ActuatorApllicationEx/ActuatorApllicationEx/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/durgesh16_batch_application_readCsvFileandWriteIntoDatabase/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/durgesh17_dataFromExceltoDb/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/durgesh18_dataFromDbToExcel/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/durgesh19_batch_application_dbtoCSV/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/durgesh1_Jpa/durgesh1_Jpa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/durgesh20_SchedulerApplication/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/durgesh21_dbtoExcelDropDownMenu/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/durgesh22_InterceptorApplication/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/durgesh23_aopApplication/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/durgesh2_devTool/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/durgesh3_BookRestAPI/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/durgesh4_thymleaf/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/durgesh5_ServerSideFormValidation/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/durgesh6_CssJsImageThymLeaf/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/durgesh7_SmartContactManager/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/durgesh8_SessionProblemThumLeaf3.1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/durgesh9_Email/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/junit5/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springsecurityapplication/Security10_part1_LimitLoginAttemptAccountlock/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springsecurityapplication/Security10_part2_LimitLoginAttemptAccountlock/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springsecurityapplication/Security1_FormBasedAuth_And_BasicAuthentication/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springsecurityapplication/Security2_InMemoryAuthentication/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springsecurityapplication/Security3_RoleBasedAuthentication/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springsecurityapplication/Security5_BasicAuthenticationAndWrittingYourOwnSecurityFilter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springsecurityapplication/Security6_custom_Security_Application/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springsecurityapplication/Security7_customLoginLogoutPage/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springsecurityapplication/Security8_RoleBasedAuthentication/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springsecurityapplication/Security9_Signupform/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springsecurityapplication/security11_jwt/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springsecurityapplication/security4_EnablingH2Database/src/main/java" charset="UTF-8" />
+  </component>
+</project>

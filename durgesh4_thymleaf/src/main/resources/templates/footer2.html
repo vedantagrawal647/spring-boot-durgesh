@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Footer2 Passing Dynamic contain</title>
+</head>
+<body>
+    <footer id="fragmentTag2" th:fragment="footer2(title,subtitle)">
+        <div class="container" >
+            <h1>Consuming Dynamic data to Fragnment</h1>
+            <h1 th:text="${title}"></h1>
+            <h2 th:text="${subtitle}"></h2>
+            <h1> About vedant footer 2</h1>
+            <h1> how are you </h1>
+            <h1> Are you fine</h1>
+            <p>lorem</p>
+            <h1>**************</h1>
+        </div>
+    </footer>
+</body>
+</html>

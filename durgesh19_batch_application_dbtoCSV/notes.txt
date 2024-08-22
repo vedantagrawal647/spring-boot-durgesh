@@ -1,0 +1,134 @@
+Configuration (BatchConfig class):
+
+This class is annotated with @Configuration and @EnableBatchProcessing, indicating it is configuring Spring Batch.
+It defines beans for JobBuilderFactory, StepBuilderFactory, and DataSource.
+It configures a FlatFileItemReader to read data from "customers.csv".
+It defines a LineMapper (DefaultLineMapper) for mapping lines from the CSV to Customer objects.
+It sets up an ItemProcessor (CustomerItemProcessor) to process each Customer item.
+It configures a JdbcBatchItemWriter to write Customer objects to a database using JDBC.
+ItemProcessor (CustomerItemProcessor class):
+
+Implements Spring Batch's ItemProcessor interface.
+Defines a process method where business logic can be applied to each Customer item before writing to the database.
+In the provided code, it simply logs the Customer object.
+Model (Customer class):
+
+Represents the structure of a Customer.
+Annotated with JPA annotations (@Entity, @Table), suggesting it could be used with an ORM like Hibernate for database operations.
+Contains fields corresponding to customer data (customerid, firstname, lastname).
+Main Application (BatchApplication class):
+
+Bootstrap class for the Spring Boot application.
+Uses @SpringBootApplication to enable auto-configuration, component scanning, and more.
+Contains the main method to start the Spring Boot application.
+Properties (application.properties):
+
+Configuration properties for the application, including database connection details (spring.datasource.*), logging settings, and Spring Batch settings (spring.batch.*).
+Key Concepts and Flow:
+
+The BatchConfig class sets up a Spring Batch job (importCustomerJob) that consists of a single step (step1).
+step1 involves reading from a CSV file (reader), processing each line (processor), and writing to a database (writer).
+The CustomerItemProcessor class is used to apply any business logic or transformation to each Customer object before persisting it.
+Suggestions for Improvement:
+
+
+
+
+@Configuration
+@EnableBatchProcessing
+public class BatchConfig {
+Package and Imports: Defines the package structure and imports necessary classes from Spring Batch and other required libraries.
+
+Configuration Annotation: @Configuration marks the class as a configuration class that defines Spring beans.
+
+EnableBatchProcessing Annotation: @EnableBatchProcessing enables Spring Batch processing features.
+
+Class Declaration and Autowiring: Defines a class BatchConfig which is responsible for configuring Spring Batch jobs and steps. Autowires necessary components like DataSource, JobBuilderFactory, and StepBuilderFactory.
+
+java
+Copy code
+    @Autowired
+    private DataSource dataSource;
+
+    @Autowired
+    private JobBuilderFactory jobBuilderFactory;
+
+    @Autowired
+    private StepBuilderFactory stepBuilderFactory;
+FlatFileItemReader Configuration:
+
+java
+Copy code
+ // Reader
+ public FlatFileItemReader<Customer> reader(){
+     FlatFileItemReader<Customer> reader = new FlatFileItemReader<>();
+     reader.setResource(new ClassPathResource("customers.csv"));
+     reader.setLineMapper(getLineMapper());
+     reader.setLinesToSkip(1);
+     return reader;
+ }
+reader(): Defines a FlatFileItemReader bean for reading data from customers.csv. It skips the first line (header) and maps each line to a Customer object using the LineMapper.
+LineMapper Configuration:
+
+java
+Copy code
+ private LineMapper<Customer> getLineMapper() {
+     DefaultLineMapper<Customer> lineMapper = new DefaultLineMapper<>();
+     DelimitedLineTokenizer lineTokenizer = new DelimitedLineTokenizer();
+     lineTokenizer.setNames(new String[]{"customerid","firstname","lastname"});
+     lineTokenizer.setIncludedFields(new int[]{1,2,3});
+     BeanWrapperFieldSetMapper<Customer> fieldSetterMapper = new BeanWrapperFieldSetMapper<>();
+     fieldSetterMapper.setTargetType(Customer.class);
+     lineMapper.setLineTokenizer(lineTokenizer);
+     lineMapper.setFieldSetMapper(fieldSetterMapper);
+     return lineMapper;
+ }
+getLineMapper(): Configures a LineMapper to map lines from customers.csv to Customer objects. It uses DelimitedLineTokenizer to split each line by commas and maps the fields to Customer properties using BeanWrapperFieldSetMapper.
+ItemProcessor Configuration:
+
+java
+Copy code
+ public CustomerItemProcessor processor(){
+     return new CustomerItemProcessor();
+ }
+processor(): Provides a bean for CustomerItemProcessor, which processes each Customer item read by the FlatFileItemReader.
+JdbcBatchItemWriter Configuration:
+
+java
+Copy code
+ @Bean
+ public JdbcBatchItemWriter<Customer> writer(){
+     JdbcBatchItemWriter<Customer> writer = new JdbcBatchItemWriter<>();
+     writer.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<Customer>());
+     writer.setSql("insert into customer(customerid,firstname,lastname) values (:customerid,:firstname,:lastname)");
+     writer.setDataSource(this.dataSource);
+     return writer;
+ }
+writer(): Configures a JdbcBatchItemWriter bean to write Customer objects to a database using SQL provided. It uses BeanPropertyItemSqlParameterSourceProvider to map Customer properties to SQL parameters.
+Job Configuration:
+
+java
+Copy code
+ @Bean
+ public Job importCustomerJob(){
+     return this.jobBuilderFactory.get("Customer-Import-Job")
+             .incrementer(new RunIdIncrementer())
+             .flow(step1())
+             .end()
+             .build();
+ }
+importCustomerJob(): Defines a Spring Batch Job named "Customer-Import-Job". It increments job parameters with each run (RunIdIncrementer), executes a single step (step1()), and completes the job.
+Step Configuration:
+
+java
+Copy code
+@Bean
+public Step step1() {
+    return this.stepBuilderFactory.get("step1")
+            .<Customer,Customer>chunk(10)
+            .reader(reader())
+            .processor(processor())
+            .writer(writer())
+            .build();
+}
+step1(): Configures a Spring Batch Step named "step1". It processes Customer objects in chunks of 10 (chunk(10)), utilizing the defined reader(), processor(), and writer() beans.

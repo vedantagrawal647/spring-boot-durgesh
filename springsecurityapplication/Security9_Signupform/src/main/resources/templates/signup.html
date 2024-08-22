@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>This is SignUp page</title>
+</head>
+<body>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="my-card mt-1">
+
+                    <h1 class="text-center"> Register Here !!</h1>
+
+                    <form novalidate th:action="@{/do_register}" method="post" th:object="${employee}">
+                        <!--  name field -->
+                        <div class="mb-3">
+
+                            <label for="exampleInputName" class="form-label">Your Name</label>
+
+                            <input type="text"
+                                   name="userName"
+                                   class="form-control"
+                                   id="exampleInputName"
+                                   aria-describedby="emailHelp"
+                                   placeholder="Enter here"
+                                   th:value="${employee.userName}"
+                                   required
+                            />
+                        </div>
+
+                        <!--  Email field -->
+                        <div class="mb-3">
+
+                            <label for="exampleInputEmail1" class="form-label">Your Email</label>
+
+                            <input type="email"
+                                   name="email"
+                                   class="form-control"
+                                   id="exampleInputEmail1"
+                                   aria-describedby="emailHelp"
+                                   placeholder="Enter here"
+                                   th:value="${employee.email}"
+                                   required
+
+                            />
+                        </div>
+
+                        <!--  Password field -->
+                        <div class="mb-3">
+
+                            <label for="exampleInputPassword" class="form-label">Your Password</label>
+
+                            <input type="password"
+                                   name="password"
+                                   class="form-control"
+                                   id="exampleInputPassword"
+                                   aria-describedby="emailHelp"
+                                   placeholder="Enter here"
+                                   required
+                                   th:value="${employee.password}"
+                            />
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label for="exampleInputRole" class="form-label">Your Role</label>
+
+                            <input type="text"
+                                   name="roles"
+                                   class="form-control"
+                                   id="exampleInputRole"
+                                   aria-describedby="emailHelp"
+                                   placeholder="Enter here"
+                                   required
+                                   th:value="${employee.roles}"
+                            />
+                        </div>
+
+                        <div class="container text-center">
+                            <button type="submit" class="btn bg-primary text-white">
+                                Submit
+                            </button>
+                            <button type="reset" class="btn btn-warning">
+                                Reset
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

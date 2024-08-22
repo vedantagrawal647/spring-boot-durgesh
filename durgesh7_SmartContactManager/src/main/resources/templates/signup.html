@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="base::layout(~{::section})"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>This is SignUp page</title>
+</head>
+<body>
+<section>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-8 offset-md-2">
+
+
+                <div class="my-card mt-1">
+
+                    <div
+                            th:if="${session.message}"
+                            th:classappend ="${session.message.type}"
+                            class="alert " role="alert"
+                    >
+                        <p th:text="${session.message.content}" class="text-center"></p>
+                        <th:block th:text="${#session.removeAttribute('message')}"></th:block>
+
+                    </div>
+
+
+                    <!-- flaticon.com for icon -->
+                    <div class="container text-center">
+
+                        <img
+                                th:src="@{/img/membership.png}" alt=""
+                                style="width:80px"
+                        />
+
+                    </div>
+
+
+                    <h1 class="text-center"> Register Here !!</h1>
+
+                    <form novalidate th:action="@{/do_register}" method="post" th:object="${userData}">
+
+                        <!--  name field -->
+                        <div class="mb-3">
+
+                            <label for="exampleInputName" class="form-label">Your Name</label>
+
+                            <input type="text"
+                                   name="name"
+                                   class="form-control"
+                                   th:classappend="${#fields.hasErrors('name')} ? 'is-invalid' : ''"
+                                   id="exampleInputName"
+                                   aria-describedby="emailHelp"
+                                   placeholder="Enter here"
+                                   th:value="${userData.name}"
+                                   required
+                            />
+
+                            <div class="invalid-feedback"
+                                 id="validationServer03Feedback"
+                                 th:each="e : ${#fields.errors('name')}"
+                                 th:text="${e}"
+                            >
+
+                            </div>
+
+                        </div>
+
+                        <!--  Email field -->
+                        <div class="mb-3">
+
+                            <label for="exampleInputEmail1" class="form-label">Your Email</label>
+
+                            <input type="email"
+                                   name="email"
+                                   class="form-control"
+                                   th:classappend="${#fields.hasErrors('email')} ? 'is-invalid' : ''"
+                                   id="exampleInputEmail1"
+                                   aria-describedby="emailHelp"
+                                   placeholder="Enter here"
+                                   th:value="${userData.email}"
+                                   required
+
+                            />
+
+                            <div class="invalid-feedback"
+                                 id="validationServer04Feedback"
+                                 th:each="e : ${#fields.errors('email')}"
+                                 th:text="${e}"
+                            >
+
+                            </div>
+
+                        </div>
+
+                        <!--  Password field -->
+                        <div class="mb-3">
+
+                            <label for="exampleInputPassword" class="form-label">Your Password</label>
+
+                            <input type="password"
+                                   name="password"
+                                   class="form-control"
+                                   th:classappend="${#fields.hasErrors('password')} ? 'is-invalid' : ''"
+                                   id="exampleInputPassword"
+                                   aria-describedby="emailHelp"
+                                   placeholder="Enter here"
+                                   required
+                                   th:value="${userData.password}"
+                            />
+
+                            <div class="invalid-feedback"
+                                 id="validationServer05Feedback"
+                                 th:each="e : ${#fields.errors('password')}"
+                                 th:text="${e}"
+                            >
+
+                            </div>
+
+
+
+                        </div>
+
+                        <!--  User About Field -->
+                        <div class="form-group">
+
+                            <textarea
+                                    name="about"
+                                    class="form-control"
+                                    placeholder="Enter something yourself"
+                                    rows="6"
+                                    th:text="${userData.about}"
+                            >
+
+                            </textarea>
+
+
+                        </div>
+
+                        <!--  terms and condition  agreement -->
+                        <div class="form-group form-check text-center">
+
+                            <input type="checkbox"
+                                   name="agreement"
+                                   class="form-check-input"
+                                   id="agreement"
+                            >
+
+                            <label for="agreement"> Accept terms and conditions</label>
+
+                        </div>
+
+                        <div class="container text-center">
+
+                            <button type="submit" class="btn bg-primary text-white">
+                                Submit
+                            </button>
+
+                            <button type="reset" class="btn btn-warning">
+                                Reset
+                            </button>
+
+                        </div>
+
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="durgeag13_Lombok" />
+        <module name="junit5" />
+        <module name="durgesh3_BookRestAPI" />
+        <module name="batch_application" />
+        <module name="dataFromExceltoDatabaseApplication (1)" />
+        <module name="custom_Security_Application (3)" />
+        <module name="custom_Security_Application (1)" />
+        <module name="springsecurityapplication (3)" />
+        <module name="api_documentation" />
+        <module name="springsecurityapplication (1)" />
+        <module name="custom_Security_Application (5)" />
+        <module name="durgesh5_ServerSideFormValidation" />
+        <module name="dataFromExceltoDatabaseApplication" />
+        <module name="batch_application (1)" />
+        <module name="InterceptorApplication" />
+        <module name="annotation" />
+        <module name="springsecurityapplication" />
+        <module name="dataFromExceltoDatabaseApplication (2)" />
+        <module name="custom" />
+        <module name="durgesh6_CssJsImageThymLeaf" />
+        <module name="SchedulerApplication" />
+        <module name="custom_Security_Application (4)" />
+        <module name="custom_Security_Application (2)" />
+        <module name="ActuatorApllicationEx" />
+        <module name="springsecurityapplication (4)" />
+        <module name="durgesh4_thymleaf" />
+        <module name="springsecurityapplication (2)" />
+        <module name="aopApplication" />
+        <module name="springsecurityapplication (5)" />
+        <module name="durgesh1_devTool" />
+        <module name="durgesh9_Email" />
+        <module name="durgesh7_SmartContactManager" />
+        <module name="durgesh1_Jpa" />
+        <module name="durgesh11_Mapping" />
+        <module name="custom_Security_Application" />
+        <module name="durgesh8_SessionProblemThumLeaf3.1" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ActuatorApllicationEx" options="-parameters" />
+      <module name="InterceptorApplication" options="-parameters" />
+      <module name="SchedulerApplication" options="-parameters" />
+      <module name="annotation" options="-parameters" />
+      <module name="aopApplication" options="-parameters" />
+      <module name="api_documentation" options="-parameters" />
+      <module name="batch_application" options="-parameters" />
+      <module name="batch_application (1)" options="-parameters" />
+      <module name="custom" options="-parameters" />
+      <module name="custom_Security_Application" options="-parameters" />
+      <module name="custom_Security_Application (1)" options="-parameters" />
+      <module name="custom_Security_Application (2)" options="-parameters" />
+      <module name="custom_Security_Application (3)" options="-parameters" />
+      <module name="custom_Security_Application (4)" options="-parameters" />
+      <module name="custom_Security_Application (5)" options="-parameters" />
+      <module name="dataFromExceltoDatabaseApplication" options="-parameters" />
+      <module name="dataFromExceltoDatabaseApplication (1)" options="-parameters" />
+      <module name="dataFromExceltoDatabaseApplication (2)" options="-parameters" />
+      <module name="durgeag13_Lombok" options="-parameters" />
+      <module name="durgesh11_Mapping" options="-parameters" />
+      <module name="durgesh1_Jpa" options="-parameters" />
+      <module name="durgesh1_devTool" options="-parameters" />
+      <module name="durgesh3_BookRestAPI" options="-parameters" />
+      <module name="durgesh4_thymleaf" options="-parameters" />
+      <module name="durgesh5_ServerSideFormValidation" options="-parameters" />
+      <module name="durgesh6_CssJsImageThymLeaf" options="-parameters" />
+      <module name="durgesh7_SmartContactManager" options="-parameters" />
+      <module name="durgesh8_SessionProblemThumLeaf3.1" options="-parameters" />
+      <module name="durgesh9_Email" options="-parameters" />
+      <module name="junit5" options="-parameters" />
+      <module name="springsecurityapplication" options="-parameters" />
+      <module name="springsecurityapplication (1)" options="-parameters" />
+      <module name="springsecurityapplication (2)" options="-parameters" />
+      <module name="springsecurityapplication (3)" options="-parameters" />
+      <module name="springsecurityapplication (4)" options="-parameters" />
+      <module name="springsecurityapplication (5)" options="-parameters" />
+    </option>
+  </component>
+</project>

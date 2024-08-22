@@ -1,0 +1,3 @@
+24-05-02 23:48:03:498 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ------  Closing JPA EntityManagerFactory for persistence unit 'default'
+24-05-02 23:48:03:519 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource ------  d1 - Shutdown initiated...
+24-05-02 23:48:03:526 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource ------  d1 - Shutdown completed.
